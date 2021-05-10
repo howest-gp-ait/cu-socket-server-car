@@ -1,0 +1,31 @@
+﻿<Window x:Class="Ait.SockCar.Server.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ait.SockCar.Server.Wpf"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="750" Width="1000" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox Header="Server configuration" HorizontalAlignment="Center" Height="70" Margin="0,10,0,0" VerticalAlignment="Top" Width="980">
+            <Grid>
+                <ComboBox x:Name="cmbIPs" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="46,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CmbIPs_SelectionChanged"/>
+                <Label Content="IP : " FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="31"/>
+                <Label Content="Port : " FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Height="28" Margin="210,7,0,0" VerticalAlignment="Top" Width="57"/>
+                <ComboBox x:Name="cmbPorts" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="267,9,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CmbPorts_SelectionChanged"/>
+                <Button x:Name="btnStartServer" Content="START" Background="ForestGreen" Foreground="White" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="424,7,0,0" VerticalAlignment="Top" Height="28" Width="81" Click="btnStartServer_Click"/>
+                <Button x:Name="btnStopServer" Content="STOP" Background="Tomato" Foreground="White" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="510,7,0,0" VerticalAlignment="Top" Height="28" Width="81" Click="btnStopServer_Click"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpCarPark" Header="Car park" HorizontalAlignment="Center" Height="600" Margin="0,100,0,0" VerticalAlignment="Top" Width="980">
+            <Grid>
+                <Label Content="CALL" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="RESPONSE" HorizontalAlignment="Left" Margin="489,10,0,0" VerticalAlignment="Top"/>
+                <ListBox x:Name="lstCall" HorizontalAlignment="Left" Height="499" Margin="28,41,0,0" VerticalAlignment="Top" Width="432"/>
+                <ListBox x:Name="lstResponse" HorizontalAlignment="Left" Height="499" Margin="484,41,0,0" VerticalAlignment="Top" Width="450"/>
+
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
